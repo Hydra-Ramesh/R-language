@@ -1,0 +1,121 @@
+Installing R and RStudio involves a few steps. Here's a step-by-step guide for Windows, macOS, and Linux:
+
+### Step 1: Install R
+
+#### For Windows:
+
+1.  Go to the [CRAN R Project website](https://cran.r-project.org/).
+2.  Click on "Download R for Windows".
+3.  Click on "base" to download the latest release.
+4.  Click on the download link (e.g., `Download R 4.x.x for Windows`).
+5.  Run the downloaded `.exe` file and follow the installation instructions.
+
+#### For macOS:
+
+1.  Go to the [CRAN R Project website](https://cran.r-project.org/).
+2.  Click on "Download R for macOS".
+3.  Download the `.pkg` file for the latest release.
+4.  Open the downloaded `.pkg` file and follow the installation instructions.
+
+#### For Linux:
+
+1.  Open a terminal.
+2.  Add the CRAN repository to your package manager:
+    -   **Debian/Ubuntu**:
+
+        ``` sh
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+        sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+        sudo apt update
+        sudo apt install r-base
+        ```
+
+    -   **Fedora**:
+
+        ``` sh
+        sudo dnf install R
+        ```
+
+    -   **CentOS/RHEL**:
+
+        ``` sh
+        sudo yum install epel-release
+        sudo yum install R
+        ```
+
+### Step 2: Install RStudio
+
+#### For Windows and macOS:
+
+1.  Go to the [RStudio website](https://rstudio.com/products/rstudio/download/).
+2.  Download the RStudio installer for your operating system.
+3.  Run the downloaded installer and follow the installation instructions.
+
+#### For Linux:
+
+1.  Download the RStudio installer for your distribution from the [RStudio website](https://rstudio.com/products/rstudio/download/).
+2.  Install the downloaded file:
+    -   **Debian/Ubuntu**:
+
+        ``` sh
+        sudo dpkg -i rstudio-xenial-1.3.1093-amd64.deb
+        sudo apt-get install -f
+        ```
+
+    -   **Fedora**:
+
+        ``` sh
+        sudo dnf install rstudio-1.3.1093-x86_64.rpm
+        ```
+
+    -   **CentOS/RHEL**:
+
+        ``` sh
+        sudo yum install rstudio-1.3.1093-x86_64.rpm
+        ```
+
+### Verifying Installation
+
+1.  **Open RStudio**.
+
+2.  **Create a new script**: File \> New File \> R Script.
+
+3.  **Type and run a simple command**:
+
+    ``` r
+    print("Hello, R!")
+    ```
+
+    -   Highlight the command and click on "Run" or press `Ctrl+Enter` (Windows/Linux) or `Cmd+Enter` (macOS).
+
+If you see the output `[1] "Hello, R!"` in the console, your installation was successful.
+
+### Updating R and RStudio
+
+#### Updating R:
+
+1.  **Windows/MacOS**: Visit the CRAN website, download, and install the latest version, which will overwrite the old version.
+2.  **Linux**: Use your package manager to update R:
+    -   **Debian/Ubuntu**:
+
+        ``` sh
+        sudo apt update
+        sudo apt upgrade r-base
+        ```
+
+    -   **Fedora**:
+
+        ``` sh
+        sudo dnf upgrade R
+        ```
+
+    -   **CentOS/RHEL**:
+
+        ``` sh
+        sudo yum update R
+        ```
+
+#### Updating RStudio:
+
+1.  Download the latest version from the [RStudio website](https://rstudio.com/products/rstudio/download/).
+2.  Run the installer, which will overwrite the old version.
