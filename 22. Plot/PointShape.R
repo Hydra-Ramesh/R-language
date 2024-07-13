@@ -1,0 +1,1 @@
+plot(1:10, pch=24, cex=3) #nolint
